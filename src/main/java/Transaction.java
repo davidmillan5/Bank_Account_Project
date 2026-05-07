@@ -19,4 +19,12 @@ public class Transaction {
     String description;
 
 
+    public Transaction(transactionType type, BigDecimal amount, LocalDateTime timestamp, String description){
+        this.type = type;
+        this.amount = amount;
+        this.timestamp = timestamp;
+        this.description = description;
+    }
+
+
 }
