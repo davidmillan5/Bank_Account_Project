@@ -27,4 +27,14 @@ public class Transaction {
     }
 
 
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                " id='" + id + '\'' +
+                ", type=" + type +
+                ", amount=" + amount +
+                ", timestamp=" + timestamp +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

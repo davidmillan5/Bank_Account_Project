@@ -8,5 +8,8 @@ public class BankAccountTestDrive {
         savingAccount1.deposit(BigDecimal.valueOf(1500052.00));
         savingAccount1.withdraw(BigDecimal.valueOf(15689.00));
         savingAccount1.applyInterest();
+        System.out.println(savingAccount1.getBalance());
+
+        savingAccount1.transactionHistory();
     }
 }
