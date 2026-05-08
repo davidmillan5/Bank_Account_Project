@@ -26,9 +26,8 @@ public class SavingsAccount extends BankAccount{
     @Override
     void withdraw(BigDecimal amount){
         LocalDateTime timestamp = LocalDateTime.now();
-        if(getBalance().compareTo(amount)>0){
+        if(getBalance().compareTo(amount) >= 0){
             balance = getBalance().subtract(amount);
-            //System.out.println(balance);
             Transaction withdrawTransaction = new Transaction(
                     transactionType.WITHDRAW,
                     amount,
@@ -39,6 +38,4 @@ public class SavingsAccount extends BankAccount{
             System.out.println("You don't have enough founds to make that withdrawal try a smaller amount.");
         }
     }
-
-
 }

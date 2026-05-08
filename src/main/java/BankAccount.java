@@ -24,7 +24,6 @@ abstract class BankAccount {
     void deposit(BigDecimal amount){
             LocalDateTime timestamp = LocalDateTime.now();
             balance = balance.add(amount);
-            //System.out.println(getBalance());
             Transaction depositTransaction = new Transaction(
                     transactionType.DEPOSIT,
                     amount,
@@ -37,7 +36,6 @@ abstract class BankAccount {
             LocalDateTime timestamp = LocalDateTime.now();
             if(getBalance().compareTo(amount)>0){
                 balance = getBalance().subtract(amount);
-                System.out.println(balance);
                 Transaction withdrawTransaction = new Transaction(
                         transactionType.WITHDRAW,
                         amount,
